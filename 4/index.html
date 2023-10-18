@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+    <img class="logo" src="./logo.png"  alt="logo">
+    </div>
+          <div class="col-md-6 text-right">task 4</div>
+        </div>
+      </header>
+      <main class="main">
+        
+            <nav class="container-fluid">
+                <div class="row">
+                  <div class="col-md-12">
+                    <ul>
+                      <li><a href="#">Ссылка 1</a></li>
+                      <li><a href="#">Ссылка 2</a></li>
+                      <li><a href="#">Ссылка 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        <section class="table-section">
+            <div class="container mt-3">
+                <div class="row">
+                  <div class="col-md-12">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Заголовок 1</th>
+                          <th>Заголовок 2</th>
+                          <th>Заголовок 3</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Значение 1</td>
+                          <td>Значение 2</td>
+                          <td>Значение 3</td>
+                        </tr>
+                        <tr>
+                          <td>Значение 1</td>
+                          <td>Значение 2</td>
+                          <td>Значение 3</td>
+                        </tr>
+                        <tr>
+                          <td>Значение 1</td>
+                          <td>Значение 2</td>
+                          <td>Значение 3</td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            
+        </section>
+        <section class="menusection">
+            <div class="container mt-3">
+                <div class="row">
+                  <div class="col-md-12">
+                    <ul class="list-inline">
+                      <li class="list-inline-item"><a href="#">Ссылка 1</a></li>
+                      <li class="list-inline-item"><a href="#">Ссылка 2</a></li>
+                      <li class="list-inline-item"><a href="#">Ссылка 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+        </section>
+        <section class="formsection">
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form>
+                            <fieldset>
+                                <input type="text" name="fio" placeholder="ФИО" required/>
+                            </fieldset>
+                    
+                            <fieldset>
+                                <input type="tel" name="tel" placeholder="Телефон" required/>
+                            </fieldset>
+                            <fieldset>
+                                <input type="email" name="email" placeholder="E-Mail" required />
+                            </fieldset>
+                            <fieldset>
+                                <input type="date" name="birthday" placeholder="Дата рождения" required />
+                            </fieldset>
+                            <fieldset>
+                                <label>
+                                    Мужской
+                                    <input type="radio" name="gender" value="male" required />
+                                </label>
+                    
+                                <label>
+                                    Женский
+                                    <input type="radio" name="gender" value="female" required/>
+                                </label>
+                            </fieldset>
+                            <fieldset>
+                                <select name="love-language[]" >
+                                    <option disabled>Выберите любимый язык пр.</option>
+                                    <option value="Pascal">Pascal</option>
+                                    <option value="C">C</option>
+                                    <option value="C++">C++/option>
+                                    <option value="JavaScript">JavaScript</option>
+                                    <option value="PHP">PHP</option>
+                                    <option value="Python">Python</option>
+                                    <option value="Java">Java</option>
+                                    <option value="Haskel">Haskel</option>
+                                    <option value="Clojure">Clojure</option>
+                                    <option value="Prolog">Prolog</option>
+                                    <option value="Scala  ">Scala </option>
+                                </select>
+                            </fieldset>
+                            <fieldset>
+                                <textarea name="about" placeholder="biography" required ></textarea>
+                            </fieldset>
+                            <fieldset>
+                                <label>
+                                    с контрактом ознакомлен (а)
+                                    <input type="checkbox" name="rights" required />
+                                </label>
+                            </fieldset>
+                            <button type="submit">Сохранить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+      </main>
+      <footer class="container-fluid mt-3">
+        <div class="row">
+          <div class="col-md-12">© 2023</div>
+        </div>
+      </footer>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+
