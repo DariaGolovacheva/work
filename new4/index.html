@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   
+     <header class="header row justify-content-between mw-100 align-items-center">
+        <img src="image.png" alt="logo" class="logo col col-6">
+        <h1 class="col col-6">Site1</h1>
+        <nav class="nav col col-12">
+            <a href="#form" class="nav-link">form </a>
+            <a href="#table" class="nav-link">table</a>
+            <a href="#link" class="nav-link">link</a>
+            
+        </nav>
+        
+    </header>
+    <p class="info mw-100">На сайте  <a href="http://www.kubsu.ru/index.php">КубГу</a> можно найти много информации</p>
+
+    <main class="main d-flex flex-column mw-100">
+        <ul id="link" class="order2 mw-100">
+            <li>
+                <a href="http://www.kubsu.ru/index.php">Kuban State University</a>
+            </li>
+            <li>
+                <a href="https://www.kubsu.ru/index.php">Kuban State University</a>
+            </li>
+            <li>
+                <a href="https://www.kubsu.ru/index.php">
+                    <img src="./image.jpg" alt="Фото">
+                </a>
+            </li>
+            <li>
+                <a href="./pages/page.html">
+                    сокращенная ссылка на внутреннюю страницу
+    
+                </a>
+            </li>
+            <li>
+                <a href="./index.html">
+                    сокращенная ссылка на главную страницу
+    
+                </a>
+            </li>
+            <li>
+                <a href="#heading">
+                    ссылка на фрагмент текущей страницы
+    
+                </a>
+            </li>
+            <li>
+                <a href="./index.html?param1=5&param2=6&param3=10">
+                    ссылка с тремя параметрами
+    
+                </a>
+            </li>
+            <li>
+                <a href="./index.html?id=1">
+                    ссылка с параметром id
+    
+                </a>
+            </li>
+            <li>
+                <a href="./header.html">
+                    относительная на страницу в текущем каталоге
+    
+                </a>
+            </li>
+            <li>
+                <a href="./about/index.html">
+                    относительная на страницу в каталоге about
+    
+                </a>
+            </li>
+            <li>
+                <a href="../404.html">
+                    относительная на страницу в каталоге уровнем выше текущего
+    
+                </a>
+            </li>
+            <li>
+                <a href="../../index.html">
+                    относительная на страницу в каталоге двумя уровнями выше
+    
+                </a>
+            </li>
+            <li>
+                <a href="https://ru.wikipedia.org/wiki/Фауна_древнегреческой_мифологии#Тигры">
+                    ссылка на фрагмент страницы стороннего сайта
+    
+                </a>
+            </li>
+            <li>
+                <img src="./image.jpg" alt="image" usemap="#workmap" width="200">
+    
+                <map name="workmap">
+                    <area shape="rect" coords="34,44,270,350" alt="photo" href="./header.html">
+                    <area shape="rect" coords="290,172,333,250" alt="photo" href="./header.html">
+                    <area shape="circle" coords="337,300,44" alt="photo" href="./header.html">
+                </map>
+            </li>
+            <li>
+                <a href="">
+                    ссылка с пустым href
+    
+                </a>
+            </li>
+            <li>
+                <a>
+                    ссылка без href
+    
+                </a>
+            </li>
+            <li>
+                <a rel="nofollow" href="https://ru.wikipedia.org/wiki/Фауна_древнегреческой_мифологии#Тигры">
+                    ссылка, по которой запрещен переход поисковикам
+    
+                </a>
+            </li>
+            <li>
+                <a href="https://ru.wikipedia.org/wiki/Фауна_древнегреческой_мифологии#Тигры">
+                    <!--noindex-->запрещенная для индексации поисковиками<!--/noindex-->
+    
+    
+                </a>
+            </li>
+            <li>
+                <ol>
+                    <li>
+                        <a href="#" title="link 1">link 1</a>
+                    </li>
+                    <li>
+                        <a href="#" title="link 2">link 2</a>
+                    </li>
+                    <li>
+                        <a href="#" title="link 3">link 3</a>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <a href="ftp://sisadmin.ru">
+                    ссылка на файл на сервере FTP с авторизацией
+                </a>
+            </li>
+        </ul>
+
+        <form id="form" class="order3 mw-100">
+            <fieldset>
+                <input type="text" name="fio" placeholder="ФИО" />
+            </fieldset>
+    
+            <fieldset>
+                <input type="tel" name="tel" placeholder="Телефон" />
+            </fieldset>
+            <fieldset>
+                <input type="email" name="email" placeholder="E-Mail" />
+            </fieldset>
+            <fieldset>
+                <input type="date" name="birthday" placeholder="Дата рождения" />
+            </fieldset>
+            <fieldset>
+                <label>
+                    Мужской
+                    <input type="radio" name="gender" value="male" />
+                </label>
+    
+                <label>
+                    Женский
+                    <input type="radio" name="gender" value="female" />
+                </label>
+            </fieldset>
+            <fieldset>
+                <select name="love-language[]" multiple>
+                    <option disabled>Выберите любимый язык пр.</option>
+                    <option value="Pascal">Pascal</option>
+                    <option value="C">C</option>
+                    <option value="C++">C++/option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="PHP">PHP</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="Haskel">Haskel</option>
+                    <option value="Clojure">Clojure</option>
+                    <option value="Prolog">Prolog</option>
+                    <option value="Scala  ">Scala </option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <textarea name="about" placeholder="biography"></textarea>
+            </fieldset>
+            <fieldset>
+                <label>
+                    с контрактом ознакомлен (а)
+                    <input type="checkbox" name="rights" />
+                </label>
+            </fieldset>
+            <button type="submit">Сохранить</button>
+        </form>
+
+        <div class="table-container mw-100 row d-flex" class="order1 mw-100">
+            <ul class="link-list col-12 col-sm-12 col-md-12 justify-content-center">
+                <li class="link-list-item">
+                    <a href="#" class="link">
+                        link1
+                    </a>
+                </li>
+                <li class="link-list-item">
+                    <a href="#" class="link">
+                        link2
+                    </a>
+                </li>
+                <li class="link-list-item">
+                    <a href="#" class="link">
+                        link3
+                    </a>
+                </li>
+                <li class="link-list-item">
+                    <a href="#" class="link">
+                        link4
+                    </a>
+                </li>
+
+            </ul>
+            <table id="table" class="col-12 col-sm-12 col-md-12">
+                <thead>
+                    <tr>
+                        <td>
+                            Col 1
+                        </td>
+                        <td>
+                            Col 2
+                        </td>
+                        <td>
+                            Col 3
+                        </td>
+                        <td>
+                            Col 4
+                        </td>
+                        <td>
+                            Col 5
+                        </td>
+                        <td>
+                            Col 6
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        
+                        <td colspan="2">ячейка</td>
+                        <td>ячейка</td>
+                        <td>ячейка</td>
+                        <td>ячейка</td>
+                        <td>ячейка</td>
+                    </tr>
+                    <tr>
+                        <td>ячейка</td>
+                        <td>ячейка</td>
+                        <td>ячейка</td>
+                        <td>ячейка</td>
+                        <td>ячейка</td>
+                        <td>ячейка</td>
+                    </tr>
+                    <tr>
+                        <td>ячейка</td>
+                        <td>ячейка</td>
+                        <td>ячейка</td>
+                        <td>ячейка</td>
+                        <td>ячейка</td>
+                        <td>ячейка</td>
+                    </tr>
+                    <tr>
+                        <td>ячейка</td>
+                        <td>ячейка</td>
+                        <td>ячейка</td>
+                        <td>ячейка</td>
+                        <td>ячейка</td>
+                        <td>ячейка</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="copyrights">(с) Сергей Синица</p>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+</html>
