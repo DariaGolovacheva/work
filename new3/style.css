@@ -18,13 +18,15 @@ body{
 }
 .logo {
     border-radius: 80%;
-    border: solid rgb(250, 6, 193);
-    position: static;
-    width: 50px;
+    border: solid rgb(34, 88, 15);
+    position: absolute;
+    left: 0;
+    width: 70px;
     padding: 1px 1px 1px 1px;
     margin-left: 3%;
     min-height: 1vh;
-}
+    float: left;
+  }
  
 .nav{
  flex-grow: 1;
@@ -179,5 +181,4 @@ tr:nth-child(even) {
 }
 
 }
-
 
