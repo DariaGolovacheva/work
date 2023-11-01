@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <script src="calculator.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Redesigned Website</title>
+  <script>
+    function calculatePrice() {
+      const productPrice = parseFloat(document.getElementById("products").value);
+      const quantity = parseInt(document.getElementById("number").value);
+
+      if (isNaN(productPrice) || isNaN(quantity)) {
+        alert("Please enter valid input values.");
+      } else {
+        const totalPrice = productPrice * quantity;
+        document.getElementById("result").textContent = "Total Price: $" + totalPrice.toFixed(2);
+      }
+    }
+  </script>
+
+</head>
+<body>
+  <header class="header-content mb-2">
+    <div class="container p-0 rounded">
+      <div class="title-logo">
+        <img src="image.jpg" id="logo" alt="logo pic">
+        <p id="page-title">Beautifully Redesigned Website</p>
+      </div>
+      <div class="ps-3"></div>
+    </div>
+  </header>
+  <main>
+    <div class="calculator">
+      <h1 class="pink">Elegant Product Calculator</h1>
+      <label for="products" class="pink">Select a Product</label>
+      <select id="products" name="products" required>
+        <option value="499.99">Luxury Chocolates - $499.99</option>
+        <option value="349.99">Artisanal Cheese - $349.99</option>
+        <option value="199.99">Handcrafted Jewelry - $199.99</option>
+        <option value="799.99">Designer Handbag - $799.99</option>
+        <option value="99.99">Scented Candles - $99.99</option>
+      </select>
+      <label class="pink" for="number">Quantity:</label>
+      <input type="number" id="number" min="0" required>
+      <input type="button" id="button" onclick="calculatePrice()" value="Calculate Total">
+      <label for="result" class="pink">Total Price:</label>
+      <div id="result" class="pink"></div>
+    </div>
+  </main>
+</body>
+</html>
