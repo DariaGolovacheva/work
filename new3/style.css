@@ -70,12 +70,6 @@ tr:nth-child(even) {
     flex-direction: column;
     align-items: flex-start;
 }
-#link{
- order: 2;
-}
-#form{
- order: 3;
-}
 table {
     max-width: 780px;
     width: 100%; 
@@ -96,7 +90,20 @@ td{
     text-align: left;
  }
 
-
+     #f section{
+    order: 3;
+    margin-top:150px;
+  }
+  #f main{
+    order:2;
+  }
+  #f form{
+    order: 1;
+  }
+  #f footer
+  {
+    order:4;
+  }
 
 
 
