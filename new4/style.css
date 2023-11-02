@@ -57,12 +57,7 @@
     .container{
       
     }
-    #link{
-     order: 2;
-    }
-    #form{
-     order: 3;
-    }
+    
     table {
         border: 1px solid #399;
         border-spacing: 0;
