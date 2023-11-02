@@ -12,7 +12,7 @@
       const productPrice = parseFloat(document.getElementById("products").value);
       const quantity = parseInt(document.getElementById("number").value);
 
-      if (isNaN(productPrice) || isNaN(quantity)) {
+      if (isNaN(productPrice) || isNaN(quantity) || quantity < 0) {
         alert("Please enter valid input values.");
       } else {
         const totalPrice = productPrice * quantity;
