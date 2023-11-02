@@ -13,7 +13,7 @@
       const quantity = parseInt(document.getElementById("number").value);
 
       if (isNaN(productPrice) || isNaN(quantity) || quantity < 0) {
-        alert("Please enter valid input values.");
+        alert("Please enter the value that is more than zero.");
       } else {
         const totalPrice = productPrice * quantity;
         document.getElementById("result").textContent = "Total Price: $" + totalPrice.toFixed(2);
