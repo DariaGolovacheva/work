@@ -108,17 +108,17 @@ td{
 
 
 @media (min-width: 780px)  {
-      #f section{
+      section{
     order: 1;
     margin-top:150px;
   }
-  #f main{
+  main{
     order:2;
   }
-  #f form{
+  form{
     order: 3;
   }
-  #f footer
+   footer
   {
     order:4;
   }
