@@ -80,6 +80,6 @@ function calculate_price_items()
     }
     else
     {
-        document.getElementById("result_items").textContent = "Неправильный формат ввода кол-ва товара";
+        document.getElementById("result_items").textContent = "are you dumb?";
     }
 }
