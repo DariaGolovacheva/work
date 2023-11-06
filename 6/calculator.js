@@ -1,6 +1,7 @@
 let radio_default = document.getElementById("radio_button_checked_by_default")
 radio_default.checked = true
 
+
 let checked_type = -1;
 function display_on(elem_id)
 {
@@ -80,6 +81,6 @@ function calculate_price_items()
     }
     else
     {
-        document.getElementById("result_items").textContent = "are you dumb?";
+        document.getElementById("result_items").textContent = "Incorrect format for enetring the quantity of goods";
     }
 }
