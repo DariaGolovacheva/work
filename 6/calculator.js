@@ -1,3 +1,6 @@
+let radio_default = document.getElementById("radio_button_checked_by_default")
+radio_default.checked = true
+
 let checked_type = -1;
 function display_on(elem_id)
 {
