@@ -16,16 +16,22 @@ function display_off(elem_id)
 
 // Вместо установки "checked" в HTML, уберем изначальную отметку и установим ее динамически в JavaScript при выборе типа товара.
 
+
 function McCombo_extend() {
     display_on('McCombo_add');
     display_off('case_add');
     checked_type = 0;
+    
+    // Показываем "Customize Your Golden Steak"
+    display_on('McCombo_add');
+    display_off('case_add');
+    checked_type = 0;
 
-    // Показываем опции для McCombo
+    // Показываем опции для Golden Steak
     display_on('checkbox_McCombo');
     display_off('colors');
+    display_on('McCombo_add'); // Показываем "Customize Your Golden Steak"
 }
-
 function case_extend() {
     display_on('case_add');
     display_off('McCombo_add');
