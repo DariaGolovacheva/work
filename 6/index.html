@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <script>
+    function calculatePrice() {
+      const productPrice = parseFloat(document.getElementById("products").value);
+      const quantity = parseInt(document.getElementById("number").value);
+
+      if (isNaN(productPrice) || isNaN(quantity) || quantity < 0) {
+        alert("Please enter the value that is more than zero.");
+      } else {
+        const totalPrice = productPrice * quantity;
+        document.getElementById("result").textContent = "Total Price: $" + totalPrice.toFixed(2);
+      }
+    }
+  </script>
+  <meta charset="UTF-8">
+<script src="calculator.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Redesigned Website</title>
+ 
+</head>
+<body>
+  <header>
+    <div class="logo-title">
+      <img src="dollar.jpg" id="logo" alt="Logo" class="logo">
+      <h1 id="page-title">Gold Website</h1> <!-- Updated title -->
+    </div>
+  </header>
+  
+  <main>
+    <div class="calculator">
+      <h1 class="pink"> Product Calculator</h1>
+      <label for="products" class="pink">Select a Product</label>
+      <select id="products" name="products" required>
+        <option value="499.99">Luxury Chocolates - $499.99</option>
+        <option value="349.99">Artisanal Cheese - $349.99</option>
+        <option value="199.99">Handcrafted Jewelry - $199.99</option>
+        <option value="799.99">Designer Handbag - $799.99</option>
+        <option value="99.99">Scented Candles - $99.99</option>
+      </select>
+      <label class="pink" for="number">Quantity:</label>
+      <input type="number" id="number" min="0" required>
+      <input type="button" id="button" onclick="calculatePrice()" value="Calculate Total">
+      <label for="result" class="pink">Total Price:</label>
+      <div id="result" class="pink"></div>
+    </div>
+    <div class="services_calculator">
+      <h1 class="luxury"> Order Calculator</h1> <!-- Updated title -->
+      
+      <!-- Updated label for radio options -->
+      <label for="radio" class="black">Select an Exclusive Option:</label>
+      <div id="radio">
+        <div>
+          <input onclick="McCombo_extend()" type="radio" id="McCombo_radio" name="radio" value="0" required>
+          <label for="McCombo_radio">Golden Steak - $499.99</label> <!-- Luxury product name and price -->
+        </div>
+        
+        <div class="McCombo_add" id="McCombo_add">
+          <h3 class="pink">Customize Your Golden Steak:</h3>
+          <div class="checkbox_McCombo" id="checkbox_McCombo">
+            <div>
+              <input value="99" type="checkbox" name="checkbox_cola" id="checkbox_cola">
+              <label for="checkbox_cola">Creamy mushroom sauce - +$99.00</label> <!-- Luxury product name and price -->
+            </div>
+            
+            <div>
+              <input value="79" type="checkbox" name="checkbox_fries" id="checkbox_fries">
+              <label for="checkbox_fries">Grilled vegetables - +$79.00</label> <!-- Luxury product name and price -->
+            </div>
+            
+            <div>
+              <input value="199" type="checkbox" name="checkbox_chicken" id="checkbox_chicken">
+              <label for="checkbox_chicken">Salsa verde - +$199.00</label> <!-- Luxury product name and price -->
+            </div>
+            
+            <div>
+              <input value="49" type="checkbox" name="checkbox_sauce" id="checkbox_sauce">
+              <label for="checkbox_sauce">Exquisite tapenade - +$49.00</label> <!-- Luxury product name and price -->
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <input onclick="case_extend()" type="radio" id="case" name="radio" value="1" required>
+          <label for="case">Luxury Beverage</label> <!-- Updated label for the beverage option -->
+        </div>
+        
+        <div class="case_add" id="case_add">
+          <label for="colors">Select a Premium Beverage:</label>
+          <select name="colors" id="colors" required>
+            <option value="89" class="black">Champagne - $89.00</option> <!-- Luxury product name and price -->
+            <option value="79" class="black">Sparkling Wine - $79.00</option> <!-- Luxury product name and price -->
+            <option value="69" class="black">Fine Whiskey - $69.00</option> <!-- Luxury product name and price -->
+          </select>
+        </div>
+        
+        <div>
+          <input onclick="ice_extend()" type="radio" id="ice" name="radio" value="2" required>
+          <label for="ice">Luxury Dessert-70$</label> <!-- Updated label for the dessert option -->
+        </div>
+      </div>
+      
+      <label class="black" for="number_items">Quantity of Selected Items:</label>
+      <input type="number" id="number_items" min="1" required>
+      
+      <input type="button" id="button_items" onclick="calculate_price_items()" value="Calculate Order Total" required>
+      
+      <label for="result_items" class="pink">Order Total:</label>
+      <div id="result_items" class="pink"></div>
+    </div>
+ 
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2023 Luxury Collection</p>
+    </div>
+  </footer>
+ 
+  </main>
+</body>
+</html>

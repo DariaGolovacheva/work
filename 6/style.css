@@ -1,0 +1,145 @@
+/* Global styles */
+body {
+  background-color: #000; /* Black background */
+  color: gold; /* Text color in gold */
+  font-family: Arial, sans-serif; /* Font family */
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+/* Header styles */
+header {
+  background-color: #000; /* Black background */
+  color: gold; /* Gold text color */
+  padding: 20px;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px; /* Adjust the margin as needed */
+}
+
+#page-title {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+
+/* Main content styles */
+.calculator, .services_calculator {
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000; /* Black background */
+  color: gold; /* Gold text color */
+  border: 5px solid gold; /* Gold border */
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.calculator h1, .services_calculator h1 {
+  color: gold; /* Gold title color */
+  font-size: 1.5em;
+}
+
+/* Form element styles */
+.calculator label, .services_calculator label {
+  color: gold; /* Gold text color */
+  margin: 10px 0;
+}
+
+select, input[type="number"] {
+  background-color: #000; /* Black background for form elements */
+  color: gold; /* Gold text color */
+  border: 1px solid gold; /* Gold border */
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+input[type="button"] {
+  background-color: gold; /* Gold background for buttons */
+  color: #000; /* Black text color */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Result styles */
+#result, #result_items {
+  background-color: #000; /* Black background */
+  color: gold; /* Gold text color */
+  border: 2px solid gold; /* Gold border */
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #000; /* Black background */
+  color: gold; /* Gold text color */
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Hyperlink styles */
+a:link, a:visited {
+  color: gold; /* Gold link color */
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: gold; /* Gold link color on hover and active states */
+}
+
+
+/* Media query for larger screens */
+@media screen and (min-width: 1080px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header {
+    font-size: 2.5vw;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav {
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  #logo {
+    width: 85px;
+    height: 85px;
+  }
+  
+  nav.header-info {
+    margin-left: 0;
+  }
+}
+
+    #table
+    {
+        order:2;
+    }
+
+    #list
+    {
+        order:1;
+    }
