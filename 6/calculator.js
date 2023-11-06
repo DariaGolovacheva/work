@@ -1,5 +1,4 @@
-let radio_default = document.getElementById("radio_button_checked_by_default")
-radio_default.checked = true
+
 
 
 let checked_type = -1;
@@ -15,26 +14,42 @@ function display_off(elem_id)
     document.getElementById(elem_id).style.display = "none";
 }
 
-function McCombo_extend()
-{
+// Вместо установки "checked" в HTML, уберем изначальную отметку и установим ее динамически в JavaScript при выборе типа товара.
+
+function McCombo_extend() {
     display_on('McCombo_add');
     display_off('case_add');
     checked_type = 0;
+
+    // Показываем опции для McCombo
+    display_on('checkbox_McCombo');
+    display_off('colors');
 }
 
-function case_extend()
-{
+function case_extend() {
     display_on('case_add');
     display_off('McCombo_add');
     checked_type = 1;
+
+    // Показываем опции для Luxury Beverage
+    display_off('checkbox_McCombo');
+    display_on('colors');
 }
 
-function ice_extend()
-{
+function ice_extend() {
     display_off('case_add');
     display_off('McCombo_add');
     checked_type = 2;
+
+    // Скрываем опции для Luxury Dessert
+    display_off('checkbox_McCombo');
+    display_off('colors');
 }
+
+// Изначально скрываем опции для всех типов товаров
+display_off('checkbox_McCombo');
+display_off('colors');
+
 
 function calculate_price_items()
 {
