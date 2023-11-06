@@ -54,7 +54,7 @@ function calculate_price_items()
 
                 cost *= n;
                 cost = cost.toFixed(2);
-                document.getElementById("result_items").textContent = cost + " руб.";
+                document.getElementById("result_items").textContent = cost + " $";
                 break;
             }
             case 1:
@@ -62,7 +62,7 @@ function calculate_price_items()
                 console.log('case1');
                 let cost = document.getElementById("colors").value * n;
                 cost = cost.toFixed(2);
-                document.getElementById("result_items").textContent = cost + " руб.";
+                document.getElementById("result_items").textContent = cost + " $.";
                 break;
             }
             case 2:
@@ -70,7 +70,7 @@ function calculate_price_items()
                 console.log('case2');
                 let cost = 70 * n;
                 cost = cost.toFixed(2);
-                document.getElementById("result_items").textContent = cost + " руб.";
+                document.getElementById("result_items").textContent = cost + " $";
                 break;
             }
         }
