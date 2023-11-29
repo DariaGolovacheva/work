@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>Задание 3</title>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=1LWglHOPhAqTqrpfi45rwIjqdzH76VlfBTzwGzVMonyWvNEhofhdAoXsqy4ubal-Q9mCg7jHxJcytvyAGQ7aPg" charset="UTF-8"></script></head>
+
+<body>
+<header>
+  <div class = "container">
+    <img src="logo.jpg" id = "logo" alt="logo pic" width="100">
+
+    <p id="page-title">Gold  website</p>
+
+    <nav>
+      <a href="#list">List</a>
+      <a href="#table">Table</a>
+      <a href="#form">Form</a>
+    </nav>
+  </div>
+</header>
+
+<div class = "content">
+  <div class = "container" id = "table">
+    <p id="font-size1">Таблица:</p>
+    <table class="black">
+      <tr class="odd">
+        <th>Колонка 1</th>
+        <th>Колонка 2</th>
+        <th>Колонка 3</th>
+        <th>Колонка 4</th>
+      </tr>
+      <tr class="even">
+        <td>Ячейка 1.1</td>
+        <td>Ячейка 1.2</td>
+        <td colspan="2">Ячейка 1.3 и 1.4</td>
+      </tr>
+      <tr class="odd">
+        <td colspan="2">Ячейка 2.1 и 2.2</td>
+        <td>Ячейка 2.3</td>
+        <td>Ячейка 2.4</td>
+      </tr>
+      <tr class="even">
+        <td colspan="3">Ячейка 3.1, 3.2 и 3.3</td>
+        <td>Ячейка 3.4</td>
+      </tr>
+      <tr class="odd">
+        <td>Ячейка 4.1</td>
+        <td>Ячейка 4.2</td>
+        <td>Ячейка 4.3</td>
+        <td>Ячейка 4.4</td>
+      </tr>
+      <tr class="even">
+        <td>Ячейка 5.1</td>
+        <td>Ячейка 5.2</td>
+        <td>Ячейка 5.3</td>
+        <td>Ячейка 5.4</td>
+      </tr>
+      <tr class="odd">
+        <td colspan="4">Ячейка 6.1, 6.2, 6.3 и 6.4</td>
+      </tr>
+    </table>
+  </div>
+
+  <ul class = "container" id = "list">
+    <p id="font-size2">Список гиперссылок:</p>
+    <li><a href="https://kubsu.ru">Абсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>
+    <li><a href="https://kubsu.ru/">Абсолютная гиперссылка на главную страницу сайта kubsu.ru в протоколе https</a></li>
+    <li><a href="5.jpg"><img src="5.jpg" alt="Ссылка-изображение" width="250" height="300"></a></li>
+    <li><a href="/example.html">Сокращенная ссылка на внутреннюю</a></li>
+    <li><a href="/">Сокращенная ссылка на главную страницу</a></li>
+    <li><a href="#fragment">Ссылка на фрагмент текущей страницы</a></li>
+    <li><a href="page.php?param1=value1&param2=value2&param3=value3">Ссылка с тремя параметрами в URL</a></li>
+    <li><a href="/page?id=123">Ссылка с параметром id в URL</a></li>
+    <li><a href="./page.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+    <li><a href="about/page.html">Относительная ссылка на страницу в каталоге about</a></li>
+    <li><a href="../page.html">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
+    <li><a href="../../page.html">Относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
+    <li>Контекстная ссылка <a href="about/page">about</a> в тексте абзаца</li>
+    <li><a href="https://www.jetbrains.com/ru-ru/products/#type=team">Ссылка на фрагмент страницы стороннего сайта</a></li>
+    <li>
+      <img src="8.jpg" alt="Ссылка на кота" width="250" height="300" usemap="#cat">
+      <map name="cat">
+        <area shape="circle" coords="20,20,50" alt="circle" href="https://kubsu.ru">
+        <area shape="rect" coords="60,60,160,120" alt="rect" href="https://www.kubsu.ru/ru/fktipm">
+      </map>
+    </li>
+
+    <li><a href="#">Ссылка с пустым href</a></li>
+    <li><a>Ссылка без href</a></li>
+    <li><a href="#" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
+    <li><a href="#" aria-hidden="true">Запрещенная для индексации поисковиками</a></li>
+    <li>
+      <span>Нумерованный список ссылок с подписями title </span>
+      <ol>
+        <li>
+          <a href = "https://yandex.com" title = "Yandex"> Яндекс </a>
+        </li>
+        <li>
+          <a href = "https://google.com" title = "Google"> Гугл </a>
+        </li>
+        <li>
+          <a href = "https://youtube.com" title = "Youtube"> Ютуб </a>
+        </li>
+      </ol>
+    </li>
+    <li><a href="ftp://example.com/myfile.ftp">Ссылка на файл на сервере FTP без авторизации</a></li>
+  </ul>
+
+  <div class = "container" id = "form">
+    <p id="font-size3">Форма:</p>
+    <form action="обработчик.php" method="post">
+      <label for="fio">1. ФИО:</label>
+      <input type="text" id="fio" name="fio" required><br><br>
+
+      <label for="phone">2. Телефон:</label>
+      <input type="tel" id="phone" name="phone" required><br><br>
+
+      <label for="email">3. E-mail:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="birthdate">4. Дата рождения:</label>
+      <input type="date" id="birthdate" name="birthdate" required><br><br>
+
+      <label>5 Пол:</label>
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Мужской</label>
+      <input type="radio" id="female" name="gender" value="female" required>
+      <label for="female">Женский</label><br><br>
+
+      <label>6. Любимый язык программирования:</label><br>
+      <select name="programming_languages[]" multiple>
+        <option value="Pascal">Pascal</option>
+        <option value="C">C</option>
+        <option value="C++">C++</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="PHP">PHP</option>
+        <option value="Python">Python</option>
+        <option value="Java">Java</option>
+        <option value="Haskell">Haskell</option>
+        <option value="Clojure">Clojure</option>
+        <option value="Prolog">Prolog</option>
+        <option value="Scala">Scala</option>
+      </select><br><br>
+      <label for="bio">7. Биография:</label><br>
+      <textarea id="bio" name="bio" rows="4" required></textarea><br><br>
+
+      <input type="checkbox" id="contract" name="contract" required>
+      <label for="contract">8. С контрактом ознакомлен(а)</label><br><br>
+
+      <input type="submit" value="Сохранить">
+    </form>
+  </div>
+</div>
+
+<div class = "container">
+  <footer>
+    <p style="text-align: center;">(с)Daria Golovacheva</p>
+  </footer>
+</div>
+</body>
+</html>
