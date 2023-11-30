@@ -43,12 +43,7 @@ body {
     height: 110px;
   }
   
-  nav {
-    display: flex;
-    flex-direction: row;
-    padding-left: 15px;
-    font-size: 28px;
-  }
+  
   
   /* Стили таблицы */
 /* Стили для таблицы в черно-золотом оформлении */
@@ -85,7 +80,16 @@ tr.even {
   a:active {
     color: #73bbff;
   }
-  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  nav a{
+      margin: 5px;
+      display: block;
+  }
   /* Стили полей ввода */
   input.field,
   select,
@@ -105,6 +109,9 @@ tr.even {
      nav{
         display: block;
         text-align: center;
+    }
+    nav a{
+        margin: 10px 0;
     }
   .content {
     display: flex;
