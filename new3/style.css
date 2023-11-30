@@ -103,6 +103,12 @@ tr.even {
   
 /* Медиа-запрос для мобильных устройств */
 @media screen and (max-width: 767px) {
+    nav{
+        display:flex;
+        flex-direction:column;
+        padding-left: 15px;
+        front-size: 28px;
+    }
   .content {
     display: flex;
     flex-direction: column;
@@ -120,12 +126,7 @@ tr.even {
   #form {
     order: 2;
   }
-.nav{
-        display:flex;
-        flex-direction:column;
-        padding-left:15px;
-        front-size:28px;
-    }
+
 }
 
 
