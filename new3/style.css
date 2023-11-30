@@ -45,7 +45,8 @@ body {
   
   nav {
     display: flex;
-    flex-direction: column;
+    justify-content:space-around;
+    align-items:center;
     padding-left: 15px;
     font-size: 28px;
   }
@@ -119,6 +120,12 @@ tr.even {
   #form {
     order: 2;
   }
+.nav{
+        display:flex;
+        flex-direction:column;
+        padding-left:15px;
+        front-size:28px;
+    }
 }
 
 
