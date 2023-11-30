@@ -45,8 +45,7 @@ body {
   
   nav {
     display: flex;
-    justify-content:space-around;
-    align-items:center;
+    flex-direction: row;
     padding-left: 15px;
     font-size: 28px;
   }
@@ -103,10 +102,9 @@ tr.even {
   
 /* Медиа-запрос для мобильных устройств */
 @media screen and (max-width: 767px) {
-    .container nav{
+     nav{
         display: block;
-        padding-left: 15px;
-        front-size: 28px;
+        text-align: center;
     }
   .content {
     display: flex;
