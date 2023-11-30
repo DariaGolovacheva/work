@@ -103,9 +103,8 @@ tr.even {
   
 /* Медиа-запрос для мобильных устройств */
 @media screen and (max-width: 767px) {
-    nav{
-        display:flex;
-        flex-direction:column;
+    .container nav{
+        display: block;
         padding-left: 15px;
         front-size: 28px;
     }
