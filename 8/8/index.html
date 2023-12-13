@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=8EKqQ3BURz_Nn0R9wgHJjUCUYqc7hirLmCa6Xu_XPjCg0wuTihVN5qbZJhSUT-9KvsIYABzQrDeoJamR4vWzLg" charset="UTF-8"></script><script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <style>
+        /* Your CSS styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: gold;
+            color: black;
+            padding: 20px;
+            text-align: center;
+            margin: 0;
+        }
+
+        .footer {
+            background-color: gold;
+            color: black;
+            padding: 30px;
+            text-align: center;
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .formcarry-container {
+            box-sizing: border-box;
+            padding: 20px;
+            border: 2px solid gold;
+            border-radius: 8px;
+            background-color: black;
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
+
+        .formcarry-container input,
+        .formcarry-container textarea {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 8px;
+            border: 1px solid gold;
+            border-radius: 4px;
+        }
+
+        .formcarry-container button {
+        padding: 10px 20px;
+        background-color: gold;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    /* Стили для кнопки "Сохранить" */
+    .formcarry-container input[type="submit"] {
+        background-color: gold;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+        .popup-background {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 999;
+        }
+
+        .b-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .b-container a {
+            display: inline-block;
+            padding: 20px;
+            background-color: black;
+            color: gold;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .b-container a:hover {
+            background-color: grey;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img class="header-logo" src="lambo-logo.jpg" alt="Lamborghini">
+            <h1 class="header-title">Choose Your Lambo</h1>
+        </div>
+    </header>
+<div class="gallery">
+    <div>
+        <img alt="" src="1.jpg" width="300" height="300">
+    </div>
+    
+    <div>
+        <img alt="" src="3.jpg" width="300" height="300">
+    </div>
+    <div>
+        <img alt="" src="4.jpg" width="300" height="300">
+    </div>
+    <div>
+        <img alt="" src="5.jpg" width="300" height="300">
+    </div>
+    <div>
+        <img alt="" src="6.jpg" width="300" height="300">
+    </div>
+    <div>
+        <img alt="" src="7.jpg" width="300" height="300">
+    </div>
+    <div>
+        <img alt="" src="8.jpg" width="300" height="300">
+    </div>
+</div>
+<script src="script.js"></script>
+
+    <div class="b-container">
+        <a href="#" id="openFormButton">Оставить заявку</a>
+    </div>
+
+    <div class="popup-background" id="popupBackground"></div>
+
+    <section class="formcarry-container" id="popup1">
+        <!-- Popup form fields -->
+        <form id="myForm" name="contact-form" class="ajaxForm" action="#" method="POST" enctype="multipart/form-data"></form>>
+            <input required name="field-name-1" id="area" placeholder="Введите ваше ФИО" /><br>
+            <input required name="field-phone" id="phone" type="number" placeholder="Введите ваш телефон" /><br>
+            <input required name="field-email" id="mail" type="email" placeholder="Введите вашу почту" /><br>
+            <input required name="field-name-1" id="orz" placeholder="Введите вашу организацию" /><br>
+            <textarea required name="field-name-2" placeholder="Введите ваше сообщение" id="coob"></textarea><br>
+            <label><input required type="checkbox" checked="checked" name="check-1" />С контрактом ознакомлен(а)</label><br>
+            <input type="submit" value="Сохранить"/><br>
+            <button onclick="goBack()">Назад</button>
+        </form>
+      
+    </section>
+    
+    <footer class="footer">
+        <div>(c) Головачева Дарья </div>
+    </footer>
+   
+    <script>
+        $(document).ready(function() {
+            $("#openFormButton").click(function(e) {
+                e.preventDefault();
+                $("#popup1, #popupBackground").fadeIn();
+            });
+
+            $("#popupBackground").click(function() {
+                $("#popup1, #popupBackground").fadeOut();
+            });
+
+            $(".ajaxForm").on('submit', function(e) {
+                e.preventDefault();
+                var formData = $(this).serialize();
+                $.ajax({
+                    type: "POST",
+                    url: $(this).attr('action'),
+                    data: formData,
+                    success: function(response) {
+                        console.log(response);
+                        alert('Форма успешно отправлена');
+                        // Очистить поля ввода
+                        $('#fc-generated-1-name').val('');
+                        $('#fc-generated-1-email').val('');
+                        $('#fc-generated-1-message').val('');
+                    },
+                    error: function(error) {
+                        console.log(error);
+                        
+                        alert('Ошибка при отправке формы');
+                    
+                    }
+                });
+            });
+        });
+    
+       
+   
+        function PopUpShow() {
+                document.getElementById("popup1").style.display = "block";
+                document.getElementById("popupBackground").style.display = "block";
+            }
+
+            // Функция для закрытия формы
+            function PopUpHide() {
+                document.getElementById("popup1").style.display = "none";
+                document.getElementById("popupBackground").style.display = "none";
+            }
+
+            // Функция для имитации "назад"
+            function goBack() {
+                PopUpHide();
+            }
+
+            // Обработчик события нажатия кнопки «Назад» в браузере
+            window.addEventListener('popstate', function(event) {
+                // Проверяем, открыта ли форма
+                var popup = document.getElementById("popup1");
+                if (popup.style.display === "block") {
+                    // Если форма открыта, закрываем её
+                    PopUpHide();
+                }
+            });
+       
+    </script>
+</body>
+</html>
