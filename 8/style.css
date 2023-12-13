@@ -1,0 +1,40 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Заполняет всю высоту экрана */
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+.footer {
+    background-color: green;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+.formcarry-container {
+    box-sizing: border-box;
+    padding: 20px;
+    border: 2px solid #7bc74d; /* Салатовый цвет границы */
+    border-radius: 8px;
+    background-color: #d0f0c0; /* Салатовый цвет фона */
+}
+
