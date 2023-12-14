@@ -124,6 +124,18 @@
         .b-container a:hover {
             background-color: grey;
         }
+        .b-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid gold;
+    z-index: 999;
+    /* Дополнительные стили для внешнего вида окна */
+}
 
     </style>
 
@@ -136,30 +148,7 @@
             <h1 class="header-title">Choose Your Lambo</h1>
         </div>
     </header>
-<div class="gallery">
-    <div>
-        <img alt="" src="1.jpg" width="300" height="300">
-    </div>
-    
-    <div>
-        <img alt="" src="3.jpg" width="300" height="300">
-    </div>
-    <div>
-        <img alt="" src="4.jpg" width="300" height="300">
-    </div>
-    <div>
-        <img alt="" src="5.jpg" width="300" height="300">
-    </div>
-    <div>
-        <img alt="" src="6.jpg" width="300" height="300">
-    </div>
-    <div>
-        <img alt="" src="7.jpg" width="300" height="300">
-    </div>
-    <div>
-        <img alt="" src="8.jpg" width="300" height="300">
-    </div>
-</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <form 
 id = "myForm"
