@@ -160,26 +160,56 @@
         <img alt="" src="8.jpg" width="300" height="300">
     </div>
 </div>
-<script src="script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<form 
+id = "myForm"
+  name = "contact-form"
+  class="ajaxForm" 
+  action="https://formcarry.com/s/Mb5Ldx4kyu" 
+  method="POST" 
+  accept-charset="UTF-8" 
+  enctype="multipart/form-data
+">
 
-    <div class="b-container">
-        <a href="#" id="openFormButton">Оставить заявку</a>
+<div class="b-container">
+    <a href="javascript:PopUpShow()">Оставить заявку</a>
+</div>
+<div class="b-popup" id="popup1">
+    <div class="b-popup-content">
+        ФИО:<br/>
+            <input required name="field-name-1" id = "area"
+            placeholder="Введите ваше ФИО" />
+            </label><br />
+            <label>
+            Телефон:<br />
+            <input required name="field-phone" id = "phone"
+            type="number"
+            placeholder="Введите ваш телефон" />
+        </label><br />
+        <label>
+            Email:<br/>
+            <input required name="field-email" id = "mail"
+            type="email"
+            placeholder="Введите вашу почту" /></label>
+            <label>
+                Организация:<br/>
+                <input required name="field-name-1" id = "orz"
+                placeholder="Введите вашу организацию" />
+                </label><br />
+                Сообщение:<br />
+                <textarea required name="field-name-2" placeholder="Введите ваше сообщение" id = "coob"></textarea>
+                </label><br />
+                <label><input required type="checkbox" checked="checked"
+                    name="check-1" />
+                С контрактом ознакомлен(а)</label><br/>
+                <input type="submit" value="Сохранить"/>
+                <br>
+                </form>
+            <div id = "menu">
+    <a href="javascript:PopUpHide()" color = "black" >назад</a>
+</div>
     </div>
-
-    <div class="popup-background" id="popupBackground"></div>
-
-    <section class="formcarry-container" id="popup1">
-        <!-- Popup form fields -->
-        <form id="myForm" name="contact-form" class="ajaxForm" action="https://formcarry.com/s/Mb5Ldx4kyu" method="POST" enctype="multipart/form-data"></form>>
-            <input required name="field-name-1" id="area" placeholder="Введите ваше ФИО" /><br>
-            <input required name="field-phone" id="phone" type="number" placeholder="Введите ваш телефон" /><br>
-            <input required name="field-email" id="mail" type="email" placeholder="Введите вашу почту" /><br>
-            <input required name="field-name-1" id="orz" placeholder="Введите вашу организацию" /><br>
-            <textarea required name="field-name-2" placeholder="Введите ваше сообщение" id="coob"></textarea><br>
-            <label><input required type="checkbox" checked="checked" name="check-1" />С контрактом ознакомлен(а)</label><br>
-            <input type="submit" value="Сохранить"/><br>
-            <button onclick="goBack()">Назад</button>
-        </form>
+</div>
       
     </section>
     
@@ -188,17 +218,19 @@
     </footer>
    
     <script>
-        $(document).ready(function() {
-            $("#openFormButton").click(function(e) {
-                e.preventDefault();
-                $("#popup1, #popupBackground").fadeIn();
-            });
-
-            $("#popupBackground").click(function() {
-                $("#popup1, #popupBackground").fadeOut();
-            });
-
-           $(function(){
+ $(document).ready(function(){
+    //Скрыть PopUp при загрузке страницы    
+    PopUpHide();
+});
+//Функция отображения PopUp
+function PopUpShow(){
+    $("#popup1").show();
+}
+//Функция скрытия PopUp
+function PopUpHide(){
+    $("#popup1").hide();
+}
+$(function(){
     $(".ajaxForm").submit(function(e){
       e.preventDefault();
       var href = $(this).attr("action");
@@ -220,34 +252,6 @@
       });
     });
   });
-    
-       
-   
-        function PopUpShow() {
-                document.getElementById("popup1").style.display = "block";
-                document.getElementById("popupBackground").style.display = "block";
-            }
-
-            // Функция для закрытия формы
-            function PopUpHide() {
-                document.getElementById("popup1").style.display = "none";
-                document.getElementById("popupBackground").style.display = "none";
-            }
-
-            // Функция для имитации "назад"
-            function goBack() {
-                PopUpHide();
-            }
-
-            // Обработчик события нажатия кнопки «Назад» в браузере
-            window.addEventListener('popstate', function(event) {
-                // Проверяем, открыта ли форма
-                var popup = document.getElementById("popup1");
-                if (popup.style.display === "block") {
-                    // Если форма открыта, закрываем её
-                    PopUpHide();
-                }
-            });
        
     </script>
 </body>
