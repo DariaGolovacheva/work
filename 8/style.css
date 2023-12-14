@@ -61,10 +61,14 @@ body {
   }
  
   
-  .footer {
-    /* ... */
-    margin-top: 20px; /* Добавляем отступ сверху */
-  }
+ .footer {
+  background-color: gold;
+  color: black;
+  padding: 30px;
+  text-align: center;
+  font-size: 18px;
+  margin-top: auto; /* Это переместит футер вниз */
+}
   
   
   #openFormButton {
