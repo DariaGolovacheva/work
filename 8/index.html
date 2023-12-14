@@ -198,30 +198,28 @@
                 $("#popup1, #popupBackground").fadeOut();
             });
 
-            $(".ajaxForm").on('submit', function(e) {
-                e.preventDefault();
-                var formData = $(this).serialize();
-                $.ajax({
-                    type: "POST",
-                    url: $(this).attr('action'),
-                    data: formData,
-                    success: function(response) {
-                        console.log(response);
-                        alert('Форма успешно отправлена');
-                        // Очистить поля ввода
-                        $('#fc-generated-1-name').val('');
-                        $('#fc-generated-1-email').val('');
-                        $('#fc-generated-1-message').val('');
-                    },
-                    error: function(error) {
-                        console.log(error);
-                        
-                        alert('Ошибка при отправке формы');
-                    
-                    }
-                });
-            });
-        });
+           $(function(){
+    $(".ajaxForm").submit(function(e){
+      e.preventDefault();
+      var href = $(this).attr("action");
+      $.ajax({
+        type: "POST",
+        dataType: "json",
+        url: href,
+        data: $(this).serialize(),
+        success: function(response){
+          if(response.status == "success"){
+            alert("Данные отправились, спасибо!");
+            var frm = document.getElementsByName('contact-form')[0];
+            frm.reset();
+            return false;
+          }else{
+            alert("Произошла ошибка: " + response.message);
+          }
+        }
+      });
+    });
+  });
     
        
    
