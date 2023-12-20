@@ -1,309 +1,78 @@
 
 <!DOCTYPE html>
-<html lang="ru">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<style>
-        body {
-            font-family: sans-serif;
-        }
-
-        img {
-            width: 100px;
-        }
-    </style>
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=w1AlJmPL04o0YcAuZDMEx4kbvr8k1y6pDAWuJNCWB5Jc7BSNhhLrl-cWA7kUCaybCdnoalIUib4cIfP0JLKvZw" charset="UTF-8"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <title>Задание 8</title>
 </head>
 
 <body>
-   
-     <header class="header">
-        <img src="image.png" alt="logo" class="logo">
-        <h1>Site1</h1>
-        <nav class="nav">
-            <a href="#form" class="nav-link">form </a>
-            <a href="#table" class="nav-link">table</a>
-            <a href="#link" class="nav-link">link</a>
-            
-        </nav>
         
-    </header>
-    <p class="info">На сайте  <a href="http://www.kubsu.ru/index.php">КубГу</a> можно найти много информации</p>
-
-    <main class="main">
-        <ul id="link">
-            <li>
-                <a href="http://www.kubsu.ru/index.php">Kuban State University</a>
-            </li>
-            <li>
-                <a href="https://www.kubsu.ru/index.php">Kuban State University</a>
-            </li>
-            <li>
-                <a href="https://www.kubsu.ru/index.php">
-                    <img src="./image.jpg" alt="Фото">
-                </a>
-            </li>
-            <li>
-                <a href="./pages/page.html">
-                    сокращенная ссылка на внутреннюю страницу
-    
-                </a>
-            </li>
-            <li>
-                <a href="./index.html">
-                    сокращенная ссылка на главную страницу
-    
-                </a>
-            </li>
-            <li>
-                <a href="#heading">
-                    ссылка на фрагмент текущей страницы
-    
-                </a>
-            </li>
-            <li>
-                <a href="./index.html?param1=5&param2=6&param3=10">
-                    ссылка с тремя параметрами
-    
-                </a>
-            </li>
-            <li>
-                <a href="./index.html?id=1">
-                    ссылка с параметром id
-    
-                </a>
-            </li>
-            <li>
-                <a href="./header.html">
-                    относительная на страницу в текущем каталоге
-    
-                </a>
-            </li>
-            <li>
-                <a href="./about/index.html">
-                    относительная на страницу в каталоге about
-    
-                </a>
-            </li>
-            <li>
-                <a href="../404.html">
-                    относительная на страницу в каталоге уровнем выше текущего
-    
-                </a>
-            </li>
-            <li>
-                <a href="../../index.html">
-                    относительная на страницу в каталоге двумя уровнями выше
-    
-                </a>
-            </li>
-            <li>
-                <a href="https://ru.wikipedia.org/wiki/Фауна_древнегреческой_мифологии#Тигры">
-                    ссылка на фрагмент страницы стороннего сайта
-    
-                </a>
-            </li>
-            <li>
-                <img src="./image.jpg" alt="image" usemap="#workmap" width="200">
-    
-                <map name="workmap">
-                    <area shape="rect" coords="34,44,270,350" alt="photo" href="./header.html">
-                    <area shape="rect" coords="290,172,333,250" alt="photo" href="./header.html">
-                    <area shape="circle" coords="337,300,44" alt="photo" href="./header.html">
-                </map>
-            </li>
-            <li>
-                <a href="">
-                    ссылка с пустым href
-    
-                </a>
-            </li>
-            <li>
-                <a>
-                    ссылка без href
-    
-                </a>
-            </li>
-            <li>
-                <a rel="nofollow" href="https://ru.wikipedia.org/wiki/Фауна_древнегреческой_мифологии#Тигры">
-                    ссылка, по которой запрещен переход поисковикам
-    
-                </a>
-            </li>
-            <li>
-                <a href="https://ru.wikipedia.org/wiki/Фауна_древнегреческой_мифологии#Тигры">
-                    <!--noindex-->запрещенная для индексации поисковиками<!--/noindex-->
-    
-    
-                </a>
-            </li>
-            <li>
-                <ol>
-                    <li>
-                        <a href="#" title="link 1">link 1</a>
-                    </li>
-                    <li>
-                        <a href="#" title="link 2">link 2</a>
-                    </li>
-                    <li>
-                        <a href="#" title="link 3">link 3</a>
-                    </li>
-                </ol>
-            </li>
-            <li>
-                <a href="ftp://sisadmin.ru">
-                    ссылка на файл на сервере FTP с авторизацией
-                </a>
-            </li>
-        </ul>
-
-        <form id="form">
-            <fieldset>
-                <input type="text" name="fio" placeholder="ФИО" />
-            </fieldset>
-    
-            <fieldset>
-                <input type="tel" name="tel" placeholder="Телефон" />
-            </fieldset>
-            <fieldset>
-                <input type="email" name="email" placeholder="E-Mail" />
-            </fieldset>
-            <fieldset>
-                <input type="date" name="birthday" placeholder="Дата рождения" />
-            </fieldset>
-            <fieldset>
-                <label>
-                    Мужской
-                    <input type="radio" name="gender" value="male" />
-                </label>
-    
-                <label>
-                    Женский
-                    <input type="radio" name="gender" value="female" />
-                </label>
-            </fieldset>
-            <fieldset>
-                <select name="love-language[]" multiple>
-                    <option disabled>Выберите любимый язык пр.</option>
-                    <option value="Pascal">Pascal</option>
-                    <option value="C">C</option>
-                    <option value="C++">C++/option>
-                    <option value="JavaScript">JavaScript</option>
-                    <option value="PHP">PHP</option>
-                    <option value="Python">Python</option>
-                    <option value="Java">Java</option>
-                    <option value="Haskel">Haskel</option>
-                    <option value="Clojure">Clojure</option>
-                    <option value="Prolog">Prolog</option>
-                    <option value="Scala  ">Scala </option>
-                </select>
-            </fieldset>
-            <fieldset>
-                <textarea name="about" placeholder="biography"></textarea>
-            </fieldset>
-            <fieldset>
-                <label>
-                    с контрактом ознакомлен (а)
-                    <input type="checkbox" name="rights" />
-                </label>
-            </fieldset>
-            <button type="submit">Сохранить</button>
-        </form>
-
-        <div class="container">
-            <ul class="link-list">
-                <li class="link-list-item">
-                    <a href="#" class="link">
-                        link1
-                    </a>
-                </li>
-                <li class="link-list-item">
-                    <a href="#" class="link">
-                        link2
-                    </a>
-                </li>
-                <li class="link-list-item">
-                    <a href="#" class="link">
-                        link3
-                    </a>
-                </li>
-                <li class="link-list-item">
-                    <a href="#" class="link">
-                        link4
-                    </a>
-                </li>
-
-            </ul>
-            <table id="table">
-                <thead>
-                    <tr>
-                        <td>
-                            Col 1
-                        </td>
-                        <td>
-                            Col 2
-                        </td>
-                        <td>
-                            Col 3
-                        </td>
-                        <td>
-                            Col 4
-                        </td>
-                        <td>
-                            Col 5
-                        </td>
-                        <td>
-                            Col 6
-                        </td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        
-                        <td colspan="2">ячейка</td>
-                        <td>ячейка</td>
-                        <td>ячейка</td>
-                        <td>ячейка</td>
-                        <td>ячейка</td>
-                    </tr>
-                    <tr>
-                        <td>ячейка</td>
-                        <td>ячейка</td>
-                        <td>ячейка</td>
-                        <td>ячейка</td>
-                        <td>ячейка</td>
-                        <td>ячейка</td>
-                    </tr>
-                    <tr>
-                        <td>ячейка</td>
-                        <td>ячейка</td>
-                        <td>ячейка</td>
-                        <td>ячейка</td>
-                        <td>ячейка</td>
-                        <td>ячейка</td>
-                    </tr>
-                    <tr>
-                        <td>ячейка</td>
-                        <td>ячейка</td>
-                        <td>ячейка</td>
-                        <td>ячейка</td>
-                        <td>ячейка</td>
-                        <td>ячейка</td>
-                    </tr>
-
-                </tbody>
-            </table>
-            
+        <button data-modal-target="#modal" id="showForm">Форма</button>
+        
+        <div class="modal" id="modal">
+          <form
+                  class="modal-body formcarryForm"
+                  id="myForm"
+                  action="https://formcarry.com/s/u9L9cnWa09"
+                  enctype="multipart/form-data"
+          >
+            <button type="button" id="backButton">Назад</button>
+          
+            <label for="name">ФИО:</label>
+            <input type="text" id="name" name="name" required autocomplete="off">
+        
+            <label for="email">Email:</label>
+            <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    autocomplete="off"
+            >
+        
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" autocomplete="off">
+        
+            <label for="organization">Организация:</label>
+            <input
+                    type="text"
+                    id="organization"
+                    name="organization"
+                    autocomplete="off"
+            >
+        
+            <label for="message">Сообщение:</label>
+            <textarea>
+                   
+            </textarea>
+        
+            <div>
+              <label for="agree">Согласие с политикой обработки персональных данных:</label>
+              <input type="checkbox" id="agree" name="agree" required>
+            </div>
+        
+            <button type="submit" id="submitForm">Отправить</button>
+          </form>
         </div>
-    </main>
-    <footer class="footer">
-        <p class="copyrights">(с) Сергей Синица</p>
-    </footer>
-
-
+        
+</div>
+<div id="overlay"></div>
+<script>
+        // Добавляем обработчик события для кнопки "Назад"
+        document.getElementById('backButton').addEventListener('click', function() {
+          // Получаем модальное окно
+          var modal = document.getElementById('modal');
+          
+          // Скрываем модальное окно
+          modal.style.display = 'none';
+        });
+      </script>
+<script src="anim.js"></script>
+<script src="storage.js"></script>
+<script src="script.js"></script>
 </body>
-
 </html>
