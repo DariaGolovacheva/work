@@ -1,253 +1,78 @@
 
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=8EKqQ3BURz_Nn0R9wgHJjUCUYqc7hirLmCa6Xu_XPjCg0wuTihVN5qbZJhSUT-9KvsIYABzQrDeoJamR4vWzLg" charset="UTF-8"></script><script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="slick/slick.min.js"></script>
-    <style>
-        /* Your CSS styles */
-        body, html {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            font-family: Arial, sans-serif;
-        }
-
-        .header {
-            background-color: gold;
-            color: black;
-            padding: 20px;
-            text-align: center;
-            margin: 0;
-        }
-
-        .footer {
-            background-color: gold;
-            color: black;
-            padding: 30px;
-            text-align: center;
-            font-size: 18px;
-            margin: 0;
-        }
-
-        .main-content {
-            flex: 1;
-            padding: 20px;
-        }
-
-        .formcarry-container {
-            box-sizing: border-box;
-            padding: 20px;
-            border: 2px solid gold;
-            border-radius: 8px;
-            background-color: black;
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 9999;
-        }
-
-        .formcarry-container input,
-        .formcarry-container textarea {
-            width: 100%;
-            margin-bottom: 15px;
-            padding: 8px;
-            border: 1px solid gold;
-            border-radius: 4px;
-        }
-
-        .formcarry-container button {
-        padding: 10px 20px;
-        background-color: gold;
-        color: black;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-        margin-top: 10px;
-    }
-
-    /* Стили для кнопки "Сохранить" */
-    .formcarry-container input[type="submit"] {
-        background-color: gold;
-        color: black;
-        border: none;
-        border-radius: 5px;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        margin-top: 10px;
-    }
-
-        .popup-background {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
-            z-index: 999;
-        }
-
-        .b-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .b-container a {
-            display: inline-block;
-            padding: 20px;
-            background-color: black;
-            color: gold;
-            border: none;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .b-container a:hover {
-            background-color: grey;
-        }
-        .b-popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border: 2px solid gold;
-    z-index: 999;
-    /* Дополнительные стили для внешнего вида окна */
-}
-
-    </style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=w1AlJmPL04o0YcAuZDMEx4kbvr8k1y6pDAWuJNCWB5Jc7BSNhhLrl-cWA7kUCaybCdnoalIUib4cIfP0JLKvZw" charset="UTF-8"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <title>Задание 8</title>
 </head>
 
 <body>
-    <header class="header">
-        <div class="header-content">
-            <img class="header-logo" src="lambo-logo.jpg" alt="Lamborghini">
-            <h1 class="header-title">Choose Your Lambo</h1>
+        
+        <button data-modal-target="#modal" id="showForm">Форма</button>
+        
+        <div class="modal" id="modal">
+          <form
+                  class="modal-body formcarryForm"
+                  id="myForm"
+                  action="https://formcarry.com/s/u9L9cnWa09"
+                  enctype="multipart/form-data"
+          >
+            <button type="button" id="backButton">Назад</button>
+          
+            <label for="name">ФИО:</label>
+            <input type="text" id="name" name="name" required autocomplete="off">
+        
+            <label for="email">Email:</label>
+            <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    autocomplete="off"
+            >
+        
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" autocomplete="off">
+        
+            <label for="organization">Организация:</label>
+            <input
+                    type="text"
+                    id="organization"
+                    name="organization"
+                    autocomplete="off"
+            >
+        
+            <label for="message">Сообщение:</label>
+            <textarea>
+                   
+            </textarea>
+        
+            <div>
+              <label for="agree">Согласие с политикой обработки персональных данных:</label>
+              <input type="checkbox" id="agree" name="agree" required>
+            </div>
+        
+            <button type="submit" id="submitForm">Отправить</button>
+          </form>
         </div>
-    </header>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<form 
-id = "myForm"
-  name = "contact-form"
-  class="ajaxForm" 
-  action="https://formcarry.com/s/Mb5Ldx4kyu" 
-  method="POST" 
-  accept-charset="UTF-8" 
-  enctype="multipart/form-data
-">
-
-<!-- <div class="b-container">
-   <a href="javascript:PopUpShow()">Оставить заявку</a>
-</div> -->
-    <div class="b-container">
-    <!-- Вот здесь добавляем кнопку "Оставить заявку" -->
-    <button onclick="PopUpShow()">Оставить заявку</button>
+        
 </div>
-<div class="b-popup" id="popup1">
-    <div class="b-popup-content">
-        ФИО:<br/>
-            <input required name="field-name-1" id = "area"
-            placeholder="Введите ваше ФИО" />
-            </label><br />
-            <label>
-            Телефон:<br />
-            <input required name="field-phone" id = "phone"
-            type="number"
-            placeholder="Введите ваш телефон" />
-        </label><br />
-        <label>
-            Email:<br/>
-            <input required name="field-email" id = "mail"
-            type="email"
-            placeholder="Введите вашу почту" /></label>
-            <label>
-                Организация:<br/>
-                <input required name="field-name-1" id = "orz"
-                placeholder="Введите вашу организацию" />
-                </label><br />
-                Сообщение:<br />
-                <textarea required name="field-name-2" placeholder="Введите ваше сообщение" id = "coob"></textarea>
-                </label><br />
-                <label><input required type="checkbox" checked="checked"
-                    name="check-1" />
-                С контрактом ознакомлен(а)</label><br/>
-                <input type="submit" value="Сохранить"/>
-                <br>
-                </form>
-            <div id = "menu">
-    <a href="javascript:PopUpHide()" color = "black" >назад</a>
-</div>
-    </div>
-</div>
-      
-    </section>
-    
-    <footer class="footer">
-        <div>(c) Головачева Дарья </div>
-    </footer>
-   
-    <script>
- $(document).ready(function(){
-    //Скрыть PopUp при загрузке страницы    
-    PopUpHide();
-  });
-
-  //Функция отображения PopUp
-  function PopUpShow(){
-    $("#popup-background, #popup1").show();
-  }
-
-  //Функция скрытия PopUp
-  function PopUpHide(){
-    $("#popup-background, #popup1").hide();
-  }
-
-  $(function(){
-    $(".ajaxForm").submit(function(e){
-      e.preventDefault();
-      var href = $(this).attr("action");
-      $.ajax({
-        type: "POST",
-        dataType: "json",
-        url: href,
-        data: $(this).serialize(),
-        success: function(response){
-          if(response.status == "success"){
-            alert("Данные отправились, спасибо!");
-            var frm = document.getElementsByName('contact-form')[0];
-            frm.reset();
-            PopUpHide(); // Скрыть форму после успешной отправки
-          }else{
-            alert("Произошла ошибка: " + response.message);
-          }
-        }
-      });
-    });
-  });
-    </script>
+<div id="overlay"></div>
+<script>
+        // Добавляем обработчик события для кнопки "Назад"
+        document.getElementById('backButton').addEventListener('click', function() {
+          // Получаем модальное окно
+          var modal = document.getElementById('modal');
+          
+          // Скрываем модальное окно
+          modal.style.display = 'none';
+        });
+      </script>
+<script src="anim.js"></script>
+<script src="storage.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
